@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auditor Panel - NHM Fund Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auditor-body">
+    <!-- Mobile Header -->
+    <header class="auditor-header">
+        <div class="auditor-header-content">
+            <h1 class="auditor-title">Auditor Panel</h1>
+            <div class="auditor-avatar-small">A</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="auditor-main">
+        <!-- Assigned Projects Section -->
+        <section class="auditor-section">
+            <h2 class="section-title">Assigned Projects</h2>
+            
+            <div class="project-cards">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-name">Primary Health Center - Renovation</h3>
+                        <span class="progress-badge progress-active">In Progress</span>
+                    </div>
+                    <div class="project-location">
+                        <span class="location-icon">📍</span>
+                        <span class="location-text">District A, Block 3</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="auditor-upload.html?project=1" class="update-btn">Update</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-name">Maternal Health Program</h3>
+                        <span class="progress-badge progress-pending">Pending</span>
+                    </div>
+                    <div class="project-location">
+                        <span class="location-icon">📍</span>
+                        <span class="location-text">District B, Block 1</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="auditor-upload.html?project=2" class="update-btn">Update</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-name">Vaccination Drive Campaign</h3>
+                        <span class="progress-badge progress-active">In Progress</span>
+                    </div>
+                    <div class="project-location">
+                        <span class="location-icon">📍</span>
+                        <span class="location-text">District A, Block 5</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="auditor-upload.html?project=3" class="update-btn">Update</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 -->
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3 class="project-name">Medical Equipment Procurement</h3>
+                        <span class="progress-badge progress-completed">Completed</span>
+                    </div>
+                    <div class="project-location">
+                        <span class="location-icon">📍</span>
+                        <span class="location-text">District C, Block 2</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="auditor-upload.html?project=4" class="update-btn">Update</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pending Uploads Section -->
+        <section class="auditor-section">
+            <h2 class="section-title">Pending Uploads</h2>
+            <div class="pending-uploads-box">
+                <p class="pending-text">No pending uploads</p>
+            </div>
+        </section>
+
+        <!-- Logout Section -->
+        <section class="auditor-section">
+            <a href="login.html" class="logout-link">Logout</a>
+        </section>
+    </main>
+
+    <!-- Universal Scripts -->
+    <script src="js/router.js"></script>
+    <script src="js/header.js"></script>
+    <script>initApp();</script>
+    <!-- Auditor Specific Scripts -->
+    <script src="auditor.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Evidence - NHM Fund Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="auditor-body">
+    <!-- Mobile Header -->
+    <header class="auditor-header">
+        <div class="auditor-header-content">
+            <a href="auditor-dashboard.html" class="back-arrow">←</a>
+            <h1 class="auditor-title">Upload Evidence</h1>
+            <div class="auditor-avatar-small">A</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="auditor-main">
+        <!-- Project Summary -->
+        <section class="upload-section">
+            <div class="project-summary-card">
+                <h2 class="summary-title">Project Summary</h2>
+                <div class="summary-item">
+                    <span class="summary-label">Project Name:</span>
+                    <span class="summary-value" id="projectName">Primary Health Center - Renovation</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">District:</span>
+                    <span class="summary-value" id="projectDistrict">District A, Block 3</span>
+                </div>
+                <div class="summary-item">
+                    <span class="summary-label">Current Milestone:</span>
+                    <span class="summary-value" id="projectMilestone">Foundation Work - 60%</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Upload Section -->
+        <section class="upload-section">
+            <h2 class="section-title">Upload Evidence</h2>
+            
+            <!-- Photo Upload -->
+            <div class="upload-item">
+                <button type="button" class="upload-btn photo-btn" id="photoBtn">
+                    <span class="upload-icon">📷</span>
+                    <span class="upload-text">Take Photo / Choose Photo</span>
+                </button>
+                <input type="file" id="photoInput" accept="image/*" capture="environment" style="display: none;">
+                <div id="photoPreview" class="upload-preview"></div>
+            </div>
+
+            <!-- Video Upload -->
+            <div class="upload-item">
+                <button type="button" class="upload-btn video-btn" id="videoBtn">
+                    <span class="upload-icon">🎥</span>
+                    <span class="upload-text">Record Video / Upload Video</span>
+                </button>
+                <input type="file" id="videoInput" accept="video/*" capture="environment" style="display: none;">
+                <div id="videoPreview" class="upload-preview"></div>
+            </div>
+
+            <!-- GPS & Timestamp Info -->
+            <div class="gps-info">
+                <span class="gps-icon">📍</span>
+                <span class="gps-text">GPS Auto-Detected</span>
+                <span class="timestamp-text" id="timestamp"></span>
+            </div>
+        </section>
+
+        <!-- Progress Update Section -->
+        <section class="upload-section">
+            <h2 class="section-title">Progress Update</h2>
+            
+            <!-- Progress Slider -->
+            <div class="form-group-mobile">
+                <label for="progressSlider" class="form-label-mobile">Select % Completed</label>
+                <div class="slider-container">
+                    <input type="range" id="progressSlider" class="progress-slider" min="0" max="100" value="60" step="5">
+                    <div class="slider-value">
+                        <span id="progressValue">60%</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Notes Textarea -->
+            <div class="form-group-mobile">
+                <label for="notesTextarea" class="form-label-mobile">Add notes (optional)</label>
+                <textarea 
+                    id="notesTextarea" 
+                    class="form-textarea-mobile" 
+                    rows="4" 
+                    placeholder="Enter any additional notes or observations..."
+                ></textarea>
+            </div>
+        </section>
+
+        <!-- Submit Button -->
+        <section class="upload-section">
+            <button type="button" class="submit-btn-mobile" id="submitBtn">
+                Submit Update
+            </button>
+        </section>
+    </main>
+
+    <!-- Universal Scripts -->
+    <script src="js/router.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/navigation_and_tabs.js"></script>
+    <script>initApp();</script>
+    <!-- Auditor Specific Scripts -->
+    <script src="auditor.js"></script>
+</body>
+</html>
+

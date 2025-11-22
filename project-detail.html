@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details - NHM Fund Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-body">
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Main Content Area -->
+        <div class="dashboard-main project-detail-main">
+            <!-- Top Header -->
+            <header class="dashboard-header">
+                <div class="header-content">
+                    <div class="header-left">
+                        <a href="admin-dashboard.html" class="back-link-header">← Back to Dashboard</a>
+                        <h1 class="page-title">Project Details</h1>
+                    </div>
+                    <div class="header-actions">
+                        <a href="alerts.html" class="btn-primary" style="padding: 0.5rem 1rem; font-size: 0.9rem;">View Alerts</a>
+                    </div>
+                    <div class="header-user">
+                        <span class="user-name">Admin User</span>
+                        <div class="user-avatar">A</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Project Detail Content -->
+            <main class="project-detail-content">
+                <!-- Project Overview & Budget Section (Two Column on Desktop) -->
+                <div class="detail-top-section">
+                    <!-- Project Overview Card -->
+                    <section class="project-overview-card">
+                        <h2 class="section-title">Project Overview</h2>
+                        <div class="overview-content">
+                            <div class="overview-item">
+                                <span class="overview-label">Project Name</span>
+                                <span class="overview-value" id="projectName">Primary Health Center - Renovation</span>
+                            </div>
+                            <div class="overview-item">
+                                <span class="overview-label">District</span>
+                                <span class="overview-value" id="districtName">District A, Block 3</span>
+                            </div>
+                            <div class="overview-item">
+                                <span class="overview-label">Location</span>
+                                <div class="location-info">
+                                    <span class="geo-icon">📍</span>
+                                    <span class="geo-coords">28.6139° N, 77.2090° E</span>
+                                </div>
+                            </div>
+                            <div class="overview-item">
+                                <span class="overview-label">Status</span>
+                                <span class="status-badge-large status-on-track">On Track</span>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Budget vs Expenditure Card -->
+                    <section class="budget-card">
+                        <h2 class="section-title">Budget & Expenditure</h2>
+                        <div class="budget-content">
+                            <div class="budget-item">
+                                <span class="budget-label">Total Budget</span>
+                                <span class="budget-value">₹8,50,000</span>
+                            </div>
+                            <div class="budget-item">
+                                <span class="budget-label">Amount Used</span>
+                                <span class="budget-value used">₹6,20,000</span>
+                            </div>
+                            <div class="budget-item">
+                                <span class="budget-label">Remaining Funds</span>
+                                <span class="budget-value remaining">₹2,30,000</span>
+                            </div>
+                            <div class="progress-bar-container">
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 73%"></div>
+                                </div>
+                                <span class="progress-text">73% Utilized</span>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- Progress Timeline Section -->
+                <section class="timeline-section">
+                    <h2 class="section-title">Milestones & Progress</h2>
+                    <div class="timeline-container">
+                        <div class="timeline-item completed">
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content">
+                                <h3 class="milestone-title">Project Initiation</h3>
+                                <div class="milestone-dates">
+                                    <span class="date-item">
+                                        <span class="date-label">Expected:</span>
+                                        <span class="date-value">15 Jan 2024</span>
+                                    </span>
+                                    <span class="date-item">
+                                        <span class="date-label">Completed:</span>
+                                        <span class="date-value completed-date">12 Jan 2024</span>
+                                    </span>
+                                </div>
+                                <span class="milestone-badge completed-badge">Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item completed">
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content">
+                                <h3 class="milestone-title">Site Survey & Planning</h3>
+                                <div class="milestone-dates">
+                                    <span class="date-item">
+                                        <span class="date-label">Expected:</span>
+                                        <span class="date-value">01 Feb 2024</span>
+                                    </span>
+                                    <span class="date-item">
+                                        <span class="date-label">Completed:</span>
+                                        <span class="date-value completed-date">28 Jan 2024</span>
+                                    </span>
+                                </div>
+                                <span class="milestone-badge completed-badge">Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item completed">
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content">
+                                <h3 class="milestone-title">Foundation Work</h3>
+                                <div class="milestone-dates">
+                                    <span class="date-item">
+                                        <span class="date-label">Expected:</span>
+                                        <span class="date-value">15 Mar 2024</span>
+                                    </span>
+                                    <span class="date-item">
+                                        <span class="date-label">Completed:</span>
+                                        <span class="date-value completed-date">10 Mar 2024</span>
+                                    </span>
+                                </div>
+                                <span class="milestone-badge completed-badge">Completed</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item in-progress">
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content">
+                                <h3 class="milestone-title">Structural Work</h3>
+                                <div class="milestone-dates">
+                                    <span class="date-item">
+                                        <span class="date-label">Expected:</span>
+                                        <span class="date-value">30 Apr 2024</span>
+                                    </span>
+                                    <span class="date-item">
+                                        <span class="date-label">Status:</span>
+                                        <span class="date-value pending-date">In Progress</span>
+                                    </span>
+                                </div>
+                                <span class="milestone-badge in-progress-badge">In Progress</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item pending">
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content">
+                                <h3 class="milestone-title">Interior Finishing</h3>
+                                <div class="milestone-dates">
+                                    <span class="date-item">
+                                        <span class="date-label">Expected:</span>
+                                        <span class="date-value">15 Jun 2024</span>
+                                    </span>
+                                    <span class="date-item">
+                                        <span class="date-label">Status:</span>
+                                        <span class="date-value pending-date">Pending</span>
+                                    </span>
+                                </div>
+                                <span class="milestone-badge pending-badge">Pending</span>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item pending">
+                            <div class="timeline-node"></div>
+                            <div class="timeline-content">
+                                <h3 class="milestone-title">Final Inspection & Handover</h3>
+                                <div class="milestone-dates">
+                                    <span class="date-item">
+                                        <span class="date-label">Expected:</span>
+                                        <span class="date-value">30 Jun 2024</span>
+                                    </span>
+                                    <span class="date-item">
+                                        <span class="date-label">Status:</span>
+                                        <span class="date-value pending-date">Pending</span>
+                                    </span>
+                                </div>
+                                <span class="milestone-badge pending-badge">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Evidence Gallery Section -->
+                <section class="gallery-section">
+                    <h2 class="section-title">Geo-Tagged Evidence</h2>
+                    <div class="gallery-grid" id="galleryGrid">
+                        <div class="gallery-item" data-image="1">
+                            <div class="gallery-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <span class="thumbnail-icon">📷</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <span class="view-icon">👁️</span>
+                                </div>
+                            </div>
+                            <div class="gallery-info">
+                                <div class="gallery-location">
+                                    <span class="gallery-gps-icon">📍</span>
+                                    <span class="gallery-coords">28.6139° N, 77.2090° E</span>
+                                </div>
+                                <div class="gallery-timestamp">12 Jan 2024, 10:30 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-image="2">
+                            <div class="gallery-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <span class="thumbnail-icon">📷</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <span class="view-icon">👁️</span>
+                                </div>
+                            </div>
+                            <div class="gallery-info">
+                                <div class="gallery-location">
+                                    <span class="gallery-gps-icon">📍</span>
+                                    <span class="gallery-coords">28.6145° N, 77.2095° E</span>
+                                </div>
+                                <div class="gallery-timestamp">28 Jan 2024, 02:15 PM</div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-image="3">
+                            <div class="gallery-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <span class="thumbnail-icon">🎥</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <span class="view-icon">👁️</span>
+                                </div>
+                            </div>
+                            <div class="gallery-info">
+                                <div class="gallery-location">
+                                    <span class="gallery-gps-icon">📍</span>
+                                    <span class="gallery-coords">28.6140° N, 77.2092° E</span>
+                                </div>
+                                <div class="gallery-timestamp">10 Mar 2024, 11:45 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-image="4">
+                            <div class="gallery-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <span class="thumbnail-icon">📷</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <span class="view-icon">👁️</span>
+                                </div>
+                            </div>
+                            <div class="gallery-info">
+                                <div class="gallery-location">
+                                    <span class="gallery-gps-icon">📍</span>
+                                    <span class="gallery-coords">28.6142° N, 77.2093° E</span>
+                                </div>
+                                <div class="gallery-timestamp">15 Mar 2024, 09:20 AM</div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-image="5">
+                            <div class="gallery-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <span class="thumbnail-icon">📷</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <span class="view-icon">👁️</span>
+                                </div>
+                            </div>
+                            <div class="gallery-info">
+                                <div class="gallery-location">
+                                    <span class="gallery-gps-icon">📍</span>
+                                    <span class="gallery-coords">28.6148° N, 77.2098° E</span>
+                                </div>
+                                <div class="gallery-timestamp">20 Mar 2024, 03:30 PM</div>
+                            </div>
+                        </div>
+
+                        <div class="gallery-item" data-image="6">
+                            <div class="gallery-thumbnail">
+                                <div class="thumbnail-placeholder">
+                                    <span class="thumbnail-icon">🎥</span>
+                                </div>
+                                <div class="gallery-overlay">
+                                    <span class="view-icon">👁️</span>
+                                </div>
+                            </div>
+                            <div class="gallery-info">
+                                <div class="gallery-location">
+                                    <span class="gallery-gps-icon">📍</span>
+                                    <span class="gallery-coords">28.6145° N, 77.2096° E</span>
+                                </div>
+                                <div class="gallery-timestamp">25 Mar 2024, 01:00 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal for Image Preview -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="modal-image-container">
+                <div class="modal-placeholder">
+                    <span class="modal-icon">📷</span>
+                    <p class="modal-text">Image Preview</p>
+                </div>
+            </div>
+            <div class="modal-info">
+                <div class="modal-location">
+                    <span class="modal-gps-icon">📍</span>
+                    <span class="modal-coords" id="modalCoords">28.6139° N, 77.2090° E</span>
+                </div>
+                <div class="modal-timestamp" id="modalTimestamp">12 Jan 2024, 10:30 AM</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Universal Scripts -->
+    <script src="js/router.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/navigation_and_tabs.js"></script>
+    <script>initApp();</script>
+    <!-- Project Detail Specific Scripts -->
+    <script src="project-detail.js"></script>
+</body>
+</html>
+

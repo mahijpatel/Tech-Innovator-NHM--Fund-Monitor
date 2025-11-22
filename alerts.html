@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alerts & Anomalies - NHM Fund Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-body">
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-logo">NHM Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admin-dashboard.html" class="nav-item" data-page="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="project-detail.html" class="nav-item" data-page="projects">
+                    <span class="nav-icon">📁</span>
+                    <span class="nav-text">Projects</span>
+                </a>
+                <a href="alerts.html" class="nav-item" data-page="alerts">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-text">Alerts</span>
+                </a>
+                <a href="reports.html" class="nav-item" data-page="reports">
+                    <span class="nav-icon">📄</span>
+                    <span class="nav-text">Reports</span>
+                </a>
+                <a href="users.html" class="nav-item" data-page="users">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">Users</span>
+                </a>
+                <a href="settings.html" class="nav-item" data-page="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </a>
+                <a href="login.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span class="nav-text">Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="dashboard-main">
+            <!-- Top Header -->
+            <header class="dashboard-header">
+                <div class="header-content">
+                    <h1 class="page-title">Alerts & Anomalies</h1>
+                    <div class="header-user">
+                        <span class="user-name">Admin User</span>
+                        <div class="user-avatar">A</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Alerts Content -->
+            <main class="alerts-content">
+                <!-- Alerts Summary Cards -->
+                <div class="alerts-summary-grid">
+                    <div class="alert-summary-card critical">
+                        <div class="summary-icon">🤖</div>
+                        <div class="summary-content">
+                            <h3 class="summary-label">AI-Flagged Projects</h3>
+                            <p class="summary-value">12</p>
+                            <span class="summary-badge critical-badge">Critical</span>
+                        </div>
+                    </div>
+
+                    <div class="alert-summary-card warning">
+                        <div class="summary-icon">⏰</div>
+                        <div class="summary-content">
+                            <h3 class="summary-label">Delayed Milestones</h3>
+                            <p class="summary-value">8</p>
+                            <span class="summary-badge warning-badge">Warning</span>
+                        </div>
+                    </div>
+
+                    <div class="alert-summary-card warning">
+                        <div class="summary-icon">💰</div>
+                        <div class="summary-content">
+                            <h3 class="summary-label">High Spend / Low Progress</h3>
+                            <p class="summary-value">5</p>
+                            <span class="summary-badge warning-badge">Warning</span>
+                        </div>
+                    </div>
+
+                    <div class="alert-summary-card resolved">
+                        <div class="summary-icon">✅</div>
+                        <div class="summary-content">
+                            <h3 class="summary-label">Missing Evidence</h3>
+                            <p class="summary-value">3</p>
+                            <span class="summary-badge resolved-badge">Resolved</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filter Bar -->
+                <div class="filter-bar">
+                    <div class="filter-group">
+                        <label for="districtFilter" class="filter-label">District</label>
+                        <select id="districtFilter" class="filter-select">
+                            <option value="all">All Districts</option>
+                            <option value="district-a">District A</option>
+                            <option value="district-b">District B</option>
+                            <option value="district-c">District C</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="alertTypeFilter" class="filter-label">Alert Type</label>
+                        <select id="alertTypeFilter" class="filter-select">
+                            <option value="all">All Types</option>
+                            <option value="ai-anomaly">AI Anomaly</option>
+                            <option value="delay">Delay</option>
+                            <option value="spend">High Spend</option>
+                            <option value="evidence">Missing Evidence</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="statusFilter" class="filter-label">Status</label>
+                        <select id="statusFilter" class="filter-select">
+                            <option value="all">All Status</option>
+                            <option value="critical">Critical</option>
+                            <option value="warning">Warning</option>
+                            <option value="resolved">Resolved</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group search-group">
+                        <label for="searchInput" class="filter-label">Search</label>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="filter-search" 
+                            placeholder="Project name..."
+                        >
+                    </div>
+                </div>
+
+                <!-- AI Anomaly Detection List -->
+                <section class="anomaly-section">
+                    <h2 class="section-title">AI-Detected Anomalies</h2>
+                    <div class="anomaly-list" id="aiAnomalyList">
+                        <div class="alert-card critical-alert" data-severity="critical">
+                            <div class="alert-left-bar"></div>
+                            <div class="alert-content">
+                                <div class="alert-header">
+                                    <h3 class="alert-title">Primary Health Center - Renovation</h3>
+                                    <span class="alert-badge critical-badge">Critical</span>
+                                </div>
+                                <div class="alert-body">
+                                    <p class="alert-type">Low Physical Progress</p>
+                                    <p class="alert-description">Project shows 60% fund utilization but only 35% physical progress detected.</p>
+                                    <div class="alert-meta">
+                                        <span class="alert-timestamp">🕐 2 hours ago</span>
+                                        <button class="view-project-btn" data-project="1">View Project</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert-card warning-alert" data-severity="warning">
+                            <div class="alert-left-bar"></div>
+                            <div class="alert-content">
+                                <div class="alert-header">
+                                    <h3 class="alert-title">Maternal Health Program</h3>
+                                    <span class="alert-badge warning-badge">Warning</span>
+                                </div>
+                                <div class="alert-body">
+                                    <p class="alert-type">GPS Mismatch</p>
+                                    <p class="alert-description">Evidence uploaded from location 2.5km away from project site.</p>
+                                    <div class="alert-meta">
+                                        <span class="alert-timestamp">🕐 5 hours ago</span>
+                                        <button class="view-project-btn" data-project="2">View Project</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert-card critical-alert" data-severity="critical">
+                            <div class="alert-left-bar"></div>
+                            <div class="alert-content">
+                                <div class="alert-header">
+                                    <h3 class="alert-title">Vaccination Drive Campaign</h3>
+                                    <span class="alert-badge critical-badge">Critical</span>
+                                </div>
+                                <div class="alert-body">
+                                    <p class="alert-type">Repeated Image Detected</p>
+                                    <p class="alert-description">Same image uploaded 3 times across different milestones.</p>
+                                    <div class="alert-meta">
+                                        <span class="alert-timestamp">🕐 1 day ago</span>
+                                        <button class="view-project-btn" data-project="3">View Project</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert-card warning-alert" data-severity="warning">
+                            <div class="alert-left-bar"></div>
+                            <div class="alert-content">
+                                <div class="alert-header">
+                                    <h3 class="alert-title">Medical Equipment Procurement</h3>
+                                    <span class="alert-badge warning-badge">Warning</span>
+                                </div>
+                                <div class="alert-body">
+                                    <p class="alert-type">Unusual Spending Pattern</p>
+                                    <p class="alert-description">80% of budget spent in first 30% of project timeline.</p>
+                                    <div class="alert-meta">
+                                        <span class="alert-timestamp">🕐 2 days ago</span>
+                                        <button class="view-project-btn" data-project="4">View Project</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="alert-card warning-alert" data-severity="warning">
+                            <div class="alert-left-bar"></div>
+                            <div class="alert-content">
+                                <div class="alert-header">
+                                    <h3 class="alert-title">Health Awareness Program</h3>
+                                    <span class="alert-badge warning-badge">Warning</span>
+                                </div>
+                                <div class="alert-body">
+                                    <p class="alert-type">Missing Evidence</p>
+                                    <p class="alert-description">No evidence uploaded for milestone completed 5 days ago.</p>
+                                    <div class="alert-meta">
+                                        <span class="alert-timestamp">🕐 3 days ago</span>
+                                        <button class="view-project-btn" data-project="5">View Project</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Manual Alerts List -->
+                <section class="manual-alerts-section">
+                    <h2 class="section-title">System Alerts & Delays</h2>
+                    <div class="alerts-table-container">
+                        <table class="alerts-table">
+                            <thead>
+                                <tr>
+                                    <th>Alert Description</th>
+                                    <th>Project</th>
+                                    <th>Officer</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Milestone deadline exceeded by 5 days</td>
+                                    <td>Primary Health Center - Renovation</td>
+                                    <td>District Officer A</td>
+                                    <td><span class="status-badge-alert alert-open">Open</span></td>
+                                    <td><button class="resolve-btn">Mark as Resolved</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Budget overrun detected</td>
+                                    <td>Maternal Health Program</td>
+                                    <td>District Officer B</td>
+                                    <td><span class="status-badge-alert alert-open">Open</span></td>
+                                    <td><button class="resolve-btn">Mark as Resolved</button></td>
+                                </tr>
+                                <tr>
+                                    <td>No progress update in 7 days</td>
+                                    <td>Vaccination Drive Campaign</td>
+                                    <td>District Officer A</td>
+                                    <td><span class="status-badge-alert alert-resolved">Resolved</span></td>
+                                    <td><button class="resolve-btn" disabled>Resolved</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Field auditor report pending</td>
+                                    <td>Medical Equipment Procurement</td>
+                                    <td>District Officer C</td>
+                                    <td><span class="status-badge-alert alert-open">Open</span></td>
+                                    <td><button class="resolve-btn">Mark as Resolved</button></td>
+                                </tr>
+                                <tr>
+                                    <td>Documentation incomplete</td>
+                                    <td>Health Awareness Program</td>
+                                    <td>District Officer B</td>
+                                    <td><span class="status-badge-alert alert-resolved">Resolved</span></td>
+                                    <td><button class="resolve-btn" disabled>Resolved</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal for Project View -->
+    <div class="modal-overlay" id="projectModal">
+        <div class="modal-content project-modal">
+            <button class="modal-close" id="modalClose">×</button>
+            <div class="modal-header">
+                <h3 class="modal-title">Project Summary</h3>
+            </div>
+            <div class="modal-body">
+                <div class="modal-project-info">
+                    <p class="modal-project-name" id="modalProjectName">Primary Health Center - Renovation</p>
+                    <p class="modal-project-district" id="modalProjectDistrict">District A, Block 3</p>
+                </div>
+                <div class="modal-actions">
+                    <a href="project-detail.html" class="modal-link-btn">Open Project Detail Page</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Universal Scripts -->
+    <script src="js/router.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/navigation_and_tabs.js"></script>
+    <script>initApp();</script>
+    <!-- Alerts Specific Scripts -->
+    <script src="alerts.js"></script>
+</body>
+</html>
+

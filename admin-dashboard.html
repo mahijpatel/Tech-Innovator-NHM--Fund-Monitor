@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - NHM Fund Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-body">
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-logo">NHM Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admin-dashboard.html" class="nav-item" data-page="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="project-detail.html" class="nav-item" data-page="projects">
+                    <span class="nav-icon">📁</span>
+                    <span class="nav-text">Projects</span>
+                </a>
+                <a href="alerts.html" class="nav-item" data-page="alerts">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-text">Alerts</span>
+                </a>
+                <a href="reports.html" class="nav-item" data-page="reports">
+                    <span class="nav-icon">📄</span>
+                    <span class="nav-text">Reports</span>
+                </a>
+                <a href="users.html" class="nav-item" data-page="users">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">Users</span>
+                </a>
+                <a href="settings.html" class="nav-item" data-page="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </a>
+                <a href="login.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span class="nav-text">Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="dashboard-main">
+            <!-- Top Header -->
+            <header class="dashboard-header">
+                <div class="header-content">
+                    <h1 class="page-title">Dashboard</h1>
+                    <div class="header-user">
+                        <span class="user-name">Admin User</span>
+                        <div class="user-avatar">A</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard Content -->
+            <main class="dashboard-content">
+                <!-- Dashboard Panel Tabs -->
+                <div class="dashboard-panel-tabs">
+                    <div class="tabs-header">
+                        <button class="tab-btn active" data-tab-target="overview-panel">Overview</button>
+                        <button class="tab-btn" data-tab-target="users-panel">Users</button>
+                        <button class="tab-btn" data-tab-target="settings-panel">Settings</button>
+                        <button class="tab-btn" data-tab-target="reports-panel">Reports</button>
+                        <button class="tab-btn" data-tab-target="profile-panel">Profile</button>
+                    </div>
+
+                    <!-- Overview Panel -->
+                    <div id="overview-panel" class="tab-panel">
+                        <!-- Stats Cards -->
+                        <div class="stats-grid">
+                            <div class="stat-card">
+                                <div class="stat-icon funds-icon">💰</div>
+                                <div class="stat-content">
+                                    <div class="stat-label">Total Funds Allocated</div>
+                                    <div class="stat-value">₹2,450,00,000</div>
+                                    <div class="stat-subtext">Allocated budget for Q4 2024</div>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon utilized-icon">💵</div>
+                                <div class="stat-content">
+                                    <div class="stat-label">Funds Utilized</div>
+                                    <div class="stat-value">₹1,850,00,000</div>
+                                    <div class="stat-subtext">75.5% utilization rate</div>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon projects-icon">📋</div>
+                                <div class="stat-content">
+                                    <div class="stat-label">Active Projects</div>
+                                    <div class="stat-value">142</div>
+                                    <div class="stat-subtext">+8 new this month</div>
+                                </div>
+                            </div>
+
+                            <div class="stat-card">
+                                <div class="stat-icon flagged-icon">⚠️</div>
+                                <div class="stat-content">
+                                    <div class="stat-label">Flagged Projects</div>
+                                    <div class="stat-value">12</div>
+                                    <div class="stat-subtext">Requires immediate attention</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Chart Section -->
+                        <div class="chart-section">
+                            <div class="chart-card">
+                                <div class="chart-header">
+                                    <h3 class="chart-title">District Utilization Chart</h3>
+                                </div>
+                                <div class="chart-placeholder">
+                                    <div class="chart-placeholder-content">
+                                        <span class="chart-icon">📈</span>
+                                        <p class="chart-message">Utilization Chart Coming Soon</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Users Panel -->
+                    <div id="users-panel" class="tab-panel" hidden>
+                        <div class="panel-card">
+                            <h2 class="panel-title">User Management</h2>
+                            <p class="panel-description">Manage system users, roles, and permissions.</p>
+                            <div class="panel-placeholder">
+                                <span class="panel-icon">👥</span>
+                                <p>User management interface coming soon</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Settings Panel -->
+                    <div id="settings-panel" class="tab-panel" hidden>
+                        <div class="panel-card">
+                            <h2 class="panel-title">System Settings</h2>
+                            <p class="panel-description">Configure system preferences and options.</p>
+                            <div class="panel-placeholder">
+                                <span class="panel-icon">⚙️</span>
+                                <p>Settings interface coming soon</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Reports Panel -->
+                    <div id="reports-panel" class="tab-panel" hidden>
+                        <div class="panel-card">
+                            <h2 class="panel-title">Reports & Analytics</h2>
+                            <p class="panel-description">Generate and view system reports.</p>
+                            <div class="panel-placeholder">
+                                <span class="panel-icon">📄</span>
+                                <p>Reports interface coming soon</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Panel -->
+                    <div id="profile-panel" class="tab-panel" hidden>
+                        <div class="panel-card">
+                            <h2 class="panel-title">Profile Settings</h2>
+                            <p class="panel-description">Manage your account profile and preferences.</p>
+                            <div class="panel-placeholder">
+                                <span class="panel-icon">👤</span>
+                                <p>Profile settings interface coming soon</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Universal Scripts -->
+    <script src="js/router.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/navigation_and_tabs.js"></script>
+    <script>initApp();</script>
+    <!-- Dashboard Specific Scripts -->
+    <script src="dashboard.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - NHM Fund Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-body">
+    <!-- Dashboard Container -->
+    <div class="dashboard-container">
+        <!-- Left Sidebar -->
+        <aside class="dashboard-sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-logo">NHM Admin Panel</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <a href="admin-dashboard.html" class="nav-item" data-page="dashboard">
+                    <span class="nav-icon">📊</span>
+                    <span class="nav-text">Dashboard</span>
+                </a>
+                <a href="project-detail.html" class="nav-item" data-page="projects">
+                    <span class="nav-icon">📁</span>
+                    <span class="nav-text">Projects</span>
+                </a>
+                <a href="alerts.html" class="nav-item" data-page="alerts">
+                    <span class="nav-icon">🔔</span>
+                    <span class="nav-text">Alerts</span>
+                </a>
+                <a href="reports.html" class="nav-item" data-page="reports">
+                    <span class="nav-icon">📄</span>
+                    <span class="nav-text">Reports</span>
+                </a>
+                <a href="users.html" class="nav-item" data-page="users">
+                    <span class="nav-icon">👥</span>
+                    <span class="nav-text">Users</span>
+                </a>
+                <a href="settings.html" class="nav-item active" data-page="settings">
+                    <span class="nav-icon">⚙️</span>
+                    <span class="nav-text">Settings</span>
+                </a>
+                <a href="login.html" class="nav-item logout">
+                    <span class="nav-icon">🚪</span>
+                    <span class="nav-text">Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content Area -->
+        <div class="dashboard-main">
+            <!-- Top Header -->
+            <header class="dashboard-header">
+                <div class="header-content">
+                    <h1 class="page-title">Settings</h1>
+                    <div class="header-user">
+                        <span class="user-name">Admin User</span>
+                        <div class="user-avatar">A</div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Settings Content -->
+            <main class="dashboard-content">
+                <div class="panel-card">
+                    <h2 class="panel-title">System Settings</h2>
+                    <p class="panel-description">Configure system preferences, notification settings, and other options.</p>
+                    <div class="panel-placeholder">
+                        <span class="panel-icon">⚙️</span>
+                        <p>Settings interface coming soon</p>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Universal Scripts -->
+    <script src="js/router.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/navigation_and_tabs.js"></script>
+    <script>initApp();</script>
+</body>
+</html>
+

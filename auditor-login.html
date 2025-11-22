@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Field Auditor Login - NHM Fund Monitor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>NHM Fund Monitor</h1>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Form Section -->
+    <main class="login-form-section">
+        <div class="login-form-container">
+            <div class="login-form-box">
+                <div class="form-header">
+                    <h2 class="form-title">Field Auditor Login</h2>
+                    <p class="form-subtitle">Enter your credentials to access the auditor dashboard</p>
+                </div>
+
+                <form class="login-form" id="auditorLoginForm">
+                    <div class="form-group">
+                        <label for="auditorEmail" class="form-label">Email</label>
+                        <input 
+                            type="email" 
+                            id="auditorEmail" 
+                            name="email" 
+                            class="form-input" 
+                            placeholder="Enter your email"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label for="auditorPassword" class="form-label">Password</label>
+                        <input 
+                            type="password" 
+                            id="auditorPassword" 
+                            name="password" 
+                            class="form-input" 
+                            placeholder="Enter your password"
+                            required
+                        >
+                    </div>
+
+                    <button type="submit" class="submit-btn auditor-submit-btn">
+                        Login
+                    </button>
+                </form>
+
+                <div class="form-footer">
+                    <a href="login.html" class="back-link-text">← Back to Role Selection</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 NHM Fund Monitor. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('auditorLoginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Form submission logic will be added later
+            // For now, redirect to dashboard
+            window.location.href = 'auditor-dashboard.html';
+        });
+    </script>
+</body>
+</html>
+
